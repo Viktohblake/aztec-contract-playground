@@ -237,19 +237,22 @@ export default function AztecPlayground() {
 
         {/* Notification */}
         {notification && (
-          <Alert
-            className={`mb-6 ${
-              notification.type === "success"
-                ? "border-green-500 bg-green-50"
-                : notification.type === "error"
-                  ? "border-red-500 bg-red-50"
-                  : "border-blue-500 bg-blue-50"
-            }`}
-          >
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{notification.message}</AlertDescription>
-          </Alert>
-        )}
+  <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-md">
+    <Alert
+      className={`shadow-lg ${
+        notification.type === "success"
+          ? "border-green-500 bg-green-50"
+          : notification.type === "error"
+            ? "border-red-500 bg-red-50"
+            : "border-blue-500 bg-blue-50"
+      }`}
+    >
+      <AlertCircle className="h-4 w-4" />
+      <AlertDescription>{notification.message}</AlertDescription>
+    </Alert>
+  </div>
+)}
+
 
         {/* Controls */}
         <Card className="mb-8">
@@ -440,7 +443,7 @@ export default function AztecPlayground() {
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="state">Current State</TabsTrigger>
                   <TabsTrigger value="settlement">Settlement</TabsTrigger>
-                  <TabsTrigger value="technical">Technical Details</TabsTrigger>
+                  <TabsTrigger value="technical">Technical Info</TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="state" className="space-y-4">
