@@ -454,7 +454,7 @@ export default function AztecPlayground() {
                         </div>
                         {mode === "private" && (
                           <p className="text-sm text-purple-600">
-                            Your counter value is private. Others can't see the exact value.
+                            Your counter value is private. Others can&apost see the exact value.
                           </p>
                         )}
                       </div>
